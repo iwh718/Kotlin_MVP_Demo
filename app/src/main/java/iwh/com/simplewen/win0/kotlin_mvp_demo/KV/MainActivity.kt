@@ -22,6 +22,7 @@ import kotlinx.android.synthetic.main.content_main.*
  * QQ群：943543759
  * 继承 kView接口，即View层，并实现该接口负责的UI操作
  * 具体，请看kView接口
+ * 因为数据简单，没有使用M层单独的文件
  */
 class MainActivity : AppCompatActivity(), kView {
     //helloWorld组件
