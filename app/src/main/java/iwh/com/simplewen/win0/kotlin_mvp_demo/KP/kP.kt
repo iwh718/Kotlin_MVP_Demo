@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import iwh.com.simplewen.win0.kotlin_mvp_demo.APP.work.showData
 import iwh.com.simplewen.win0.kotlin_mvp_demo.APP.work.showDataListerer
+import iwh.com.simplewen.win0.kotlin_mvp_demo.KM.kM
 import iwh.com.simplewen.win0.kotlin_mvp_demo.KV.kView
 import java.lang.Exception
 import java.lang.invoke.MethodHandles
@@ -39,10 +40,10 @@ class kP(var kview: kView) {
                 kview.showSnackBar(e.toString())
             }
 
-            override fun resOk(data: MutableMap<String, String>) {
+            override fun resOk(data: kM) {
                 mHandler.post {
                     kview.hideLoad()
-                    kview.showSnackBar(data["name"]!!)
+                    kview.showSnackBar(data.name)
                 }
             }
         })

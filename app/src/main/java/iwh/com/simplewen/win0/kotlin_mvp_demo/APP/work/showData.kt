@@ -1,4 +1,5 @@
 package iwh.com.simplewen.win0.kotlin_mvp_demo.APP.work
+import iwh.com.simplewen.win0.kotlin_mvp_demo.KM.kM
 import java.lang.Exception
 import kotlin.concurrent.thread
 
@@ -18,7 +19,7 @@ class showData: showWorrk {
             Thread.sleep(2000)
             try {
                 //该监听器负责处理请求结果
-                showDataListerer.resOk( mutableMapOf("name" to "IWH"))
+                showDataListerer.resOk(kM("iwh"))
             }catch (e:Exception){
                 showDataListerer.resError(e)
             }
